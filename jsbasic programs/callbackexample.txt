@@ -1,0 +1,44 @@
+callbacks: 
+1.callbacks is a normal javascript function ,which is passesed as an argument to another function.
+2.it is a design pattern.
+3.In nodejs program does not execute line by line.
+4.program is executeed asynchronuesly
+
+
+
+lets consider the hotel example:
+
+senario one:normal  programmming languages
+
+step 1: customer ordered the item to server
+
+step 2:server take the order from customer and send the order to cheff.
+
+step 3:server will wait untill cheff prepares the food.
+
+step 4: if second customer visits to hotel  ,he has to wait for server to come back from server.
+
+step 5:once the server come from cheff and delivere the first customer order ,then he ill take the second customer order and process.
+
+this is time taking and executing tasks one by one in normal programs.
+
+
+senario two:callback nodejs 
+
+step 1: customer ordered the item to server
+
+step 2:server take the order from customer and send the order to cheff.
+
+step 3:After sending the order to cheff, server ill tell the cheff that once the food is ready click the button(here it is like calling callback function).
+
+step 4:parllally food is preparing by cheff in kitchen and server ill come back to take the second customer order.
+
+step 5:once the food is ready fro the first customer  cheff will trigger the callback to server to indicate food is ready for first customer.
+
+step 6: server ill stop taking the order from the second customer order for a while ,and server ill go back to cheff and delivers the food for first customer.
+
+step 7: after delivering food to first customer server ill countinue the remaing operations of the second customer.
+
+
+
+
